@@ -4,30 +4,40 @@
 document.addEventListener('keydown', function(event) {
     
     if ( event.code == 'KeyA') {
-        console.log('keydown');
         
-// document.addEventListener('keyup', function() {
-//    btnA.style.width = '50px';
-//    btnA.style.background = 'red'; 
-//}, { once: true });
      document.getElementById('buttonA').animate([
          {transform: 'translateY(0px)'},
          {transform: 'translateY(10px)'}
      ], { 
-      duration: 200,
-      iterations: 1
-      });
+          duration: 300,
+          iterations: 1
+        });
         
-        console.log('keyup');
-        audio.play();
+        audioA.play();
+        console.log('A');
   }  else if (event.code == 'KeyS') {
-    const btnS = document.getElementById('buttonS');
-        btnS.addEventListener('keyup', function() {
-  btnS.style.width = '50px';
-    btnS.style.background = 'red';
-  }, { once: true });  
-  
+      document.getElementById('buttonS').animate([
+         {transform: 'translateY(0px)'},
+         {transform: 'translateY(10px)'}
+     ], { 
+          duration: 300,
+          iterations: 1
+        });
+        
+        audioS.play();
+    
+       console.log('S');
   } else if (event.code == 'KeyD') {
+      document.getElementById('buttonD').animate([
+         {transform: 'translateY(0px)'},
+         {transform: 'translateY(10px)'}
+     ], { 
+          duration: 300,
+          iterations: 1
+        });
+        
+        audioD.play();
+      
     console.log('D');
   } else if (event.code == 'KeyF') {
     console.log('F');
@@ -44,20 +54,20 @@ document.addEventListener('keydown', function(event) {
     });
 
 
-//function changeButton (event) {
-//
-//const btn = document.querySelector('.button');
-//    btn.style.width = '50px';
-//    btn.style.background = 'red';
-//
-//}
 
-const audio = document.getElementById("myAudio");
+
+const audioA = document.getElementById("myAudio-A");
 function playAudio() { 
-  audio.play(); 
+  audioA.play(); 
 } 
 
+const audioS = document.getElementById("myAudio-S");
+function playAudio() { 
+  audioS.play(); 
+} 
 
-// keydown keyup keypress
-//document.addEventListener('keydown', function(event) {
-//});
+const audioD = document.getElementById("myAudio-D");
+function playAudio() { 
+  audioD.play(); 
+} 
+
