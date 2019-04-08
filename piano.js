@@ -1,11 +1,32 @@
-//const btn = document.getElementById('buttona'); 
+//const btn = document.getElementById('buttons'); 
+//const btnA = document.getElementById('buttonA');
 
-document.addEventListener('keyup', function(event) {
+document.addEventListener('keydown', function(event) {
     
     if ( event.code == 'KeyA') {
-    console.log('A');
+        console.log('keydown');
+        
+// document.addEventListener('keyup', function() {
+//    btnA.style.width = '50px';
+//    btnA.style.background = 'red'; 
+//}, { once: true });
+     document.getElementById('buttonA').animate([
+         {transform: 'translateY(0px)'},
+         {transform: 'translateY(10px)'}
+     ], { 
+      duration: 200,
+      iterations: 1
+      });
+        
+        console.log('keyup');
+        audio.play();
   }  else if (event.code == 'KeyS') {
-    console.log('S');
+    const btnS = document.getElementById('buttonS');
+        btnS.addEventListener('keyup', function() {
+  btnS.style.width = '50px';
+    btnS.style.background = 'red';
+  }, { once: true });  
+  
   } else if (event.code == 'KeyD') {
     console.log('D');
   } else if (event.code == 'KeyF') {
@@ -19,9 +40,17 @@ document.addEventListener('keyup', function(event) {
   } else if (event.code == 'KeyK') {
     console.log('K');
   }
-
-        
+     
     });
+
+
+//function changeButton (event) {
+//
+//const btn = document.querySelector('.button');
+//    btn.style.width = '50px';
+//    btn.style.background = 'red';
+//
+//}
 
 const audio = document.getElementById("myAudio");
 function playAudio() { 
