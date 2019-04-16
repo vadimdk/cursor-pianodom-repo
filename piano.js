@@ -1,17 +1,15 @@
-//const btn = document.getElementById('buttons'); 
-//const btnA = document.getElementById('buttonA');
 
 document.addEventListener('keydown', function(event) {
     
     if ( event.code == 'KeyA') {
-        
-     document.getElementById('buttonA').animate([
+       document.getElementById('buttonA').animate([
          {transform: 'translateY(0px)'},
          {transform: 'translateY(10px)'}
      ], { 
           duration: 300,
           iterations: 1
-        });
+        }); 
+     
         
         audioA.play();
         console.log('A');
